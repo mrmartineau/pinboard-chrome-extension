@@ -1,0 +1,102 @@
+/**
+ * Place your custom CSS styles here.
+ **/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700|Karla:400,700,400italic,700italic);
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+	background-color: #fcfcfc;
+	padding-top: 180px;
+	font-family: 'Open Sans', Helvetica, sans-serif !important;
+}
+
+#banner {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	padding: 25px 50px !important;
+	background-color: #fff;
+	width: 100% !important;
+	border-bottom: none !important;
+	z-index: 999;
+	margin-bottom: 0 !important;
+	height: 70px;
+}
+
+/*#banner {
+	margin: 0 auto;
+}*/
+
+
+#top_menu a {
+
+}
+
+#banner a {
+
+}
+
+#searchbox {
+	position: absolute;
+	top: 70px;
+	left: 0;
+	right: 0;
+	padding: 15px;
+	height: 60px;
+	background-color: #F0EFEF;
+	z-index: 999;
+}
+#searchbox form {
+	max-width: 980px;
+	margin: 0 auto;
+	text-align: center;
+}
+#search_query_field {
+	padding: 5px;
+	border: 2px solid #bbb;
+	background-color: #fff;
+	border-radius: 5px;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: top;
+	width: 300px;
+}
+#search_query_field:focus {
+	outline: none;
+	border-color: #aaa;
+}
+#searchbox br {
+	display: none;
+}
+.search_button {
+	display: inline-block;
+	/*margin-left: 15px;*/
+	vertical-align: middle;
+	margin-top: 0 !important;
+}
+.search_button input[type=submit] {
+	background-color: #fff;
+	border-radius: 5px;
+	height: 30px;
+	line-height: 30px;
+	border: none;
+	padding: 0 15px;
+	vertical-align: top;
+	margin-left: 15px;
+}
+.search_button input[type=submit]:hover {
+
+}
+.search_button p {
+	margin-bottom: 0 !important;
+	margin-left: 15px;
+}
+
+.pin-ac.on {
+	width: 300px;
+}
