@@ -241,8 +241,26 @@ a.bundle:hover {
 	margin-left: 15px;
 }
 
-.pin-ac.on {
-	width: 300px;
+.pin-ac {
+	.bd {
+		width: 300px !important;
+		margin-left: 38px !important;
+		border: 2px solid darken($color-search-bg, 25%) !important;
+		border-top-width: 0 !important;
+		box-shadow: none !important;
+		border-radius: 0 0 5px 5px;
+		overflow: hidden;
+		margin-top: -5px;
+		text-align: left !important;
+	}
+
+	.match {
+		color: $color-primary !important;
+	}
+	.active {
+		background-color: $color-primary !important;
+		color: #fff !important;
+	}
 }
 
 /**
