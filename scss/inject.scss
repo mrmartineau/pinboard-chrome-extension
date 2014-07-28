@@ -84,6 +84,20 @@ body {
 #timer {
 	display: none;
 }
+#top_menu {
+	margin-top: 0 !important;
+	font-size: $font-size - 3;
+	display: none !important;
+
+	@media screen and (min-width: 900px) {
+		display: block !important;
+	}
+
+	@media screen and (min-width: 1100px) {
+		font-size: $font-size;
+	}
+}
+
 /*#banner {
 	margin: 0 auto;
 }*/
