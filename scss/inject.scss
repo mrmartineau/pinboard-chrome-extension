@@ -11,7 +11,35 @@ $color-search-bg: #F0EFEF;
 
 $header-height: 70px;
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700|Karla:400,700,400italic,700italic);
+// @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700|Karla:400,700,400italic,700italic);
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('chrome-extension://pbopnmphcjicbibaldhakdgngamcjkbl/src/inject/OpenSans-Regular-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-style: italic;
+  src: url('chrome-extension://pbopnmphcjicbibaldhakdgngamcjkbl/src/inject/OpenSans-Italic-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: bold;
+  font-weight: 600;
+  src: url('chrome-extension://pbopnmphcjicbibaldhakdgngamcjkbl/src/inject/OpenSans-Bold-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: bold;
+  font-weight: 600;
+  font-style: italic;
+  src: url('chrome-extension://pbopnmphcjicbibaldhakdgngamcjkbl/src/inject/OpenSans-Bolditalic-webfont.woff') format('woff');
+}
+
+$font-family: 'Open Sans', Helvetica, sans-serif !important;
 html {
 	box-sizing: border-box;
 }
