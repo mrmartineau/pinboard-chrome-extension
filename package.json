@@ -1,7 +1,7 @@
 {
   "name": "pinboard-chrome-extension",
   "title": "Pinboard Chrome Extension",
-  "description": "A lightweight front-end framework for creating scalable, responsive sites",
+  "description": "A Chrome Extension for pinboard.in",
   "version": "0.0.1",
   "homepage": "https://github.com/mrmartineau/pinboard-chrome-extension",
   "authors": [
