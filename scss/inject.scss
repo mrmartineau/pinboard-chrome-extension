@@ -351,10 +351,17 @@ a.bundle:hover {
 	margin-left: 0 !important;
 	font-size: 2em !important;
 	line-height: 1;
+
+	span {
+		color: #fff;
+
+		&:after {
+			content: '\2606';
+			color: #ddd;
+		}
+	}
 }
-.star span:after {
-	content: '\2606';
-}
+
 .star:hover,
 .selected_star {
 	color: $color-primary !important;
