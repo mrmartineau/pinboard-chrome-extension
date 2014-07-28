@@ -75,6 +75,11 @@ body {
 }
 #logo {
 	width: auto !important;
+	background: url(chrome-extension://pbopnmphcjicbibaldhakdgngamcjkbl/img/pinboard.svg) 0 center no-repeat;
+	padding-left: 40px;
+}
+.pin_logo {
+	display: none;
 }
 #timer {
 	display: none;
