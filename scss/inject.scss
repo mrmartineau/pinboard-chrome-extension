@@ -6,6 +6,7 @@ $color-text: #34495e;
 $color-link: $color-primary;
 $color-tag: #B34700;
 $color-bundle: #00B874;
+$font-size: 15px;
 
 $color-search-bg: #F0EFEF;
 
@@ -51,9 +52,9 @@ html {
 body {
 	background-color: #fff;
 	padding-top: ($header-height * 2) + 30;
-	font-family: 'Open Sans', Helvetica, sans-serif !important;
+	font-family: $font-family;
 	color: $color-text !important;
-	font-size: 15px !important;
+	font-size: $font-size !important;
 }
 
 /**
@@ -275,7 +276,7 @@ a.bundle:hover {
  */
 #content {
 	width: 90% !important;
-	max-width: 1200px !important;
+	max-width: none !important;
 }
 #content:after,
 .bookmark:after {
@@ -306,7 +307,6 @@ a.bundle:hover {
 	position: absolute;
 	bottom: 100% !important;
 	left: 0;
-	margin-bottom: 5px;
 	width: 100px !important;
 }
 #nextprev {
@@ -326,9 +326,10 @@ a.bundle:hover {
 	position: relative;
 	margin-left: -10px !important;
 	// margin-bottom: 0 !important;
-}
-.bookmark:hover {
-	/*background-color: #fff;*/
+
+	&:hover {
+		/*background-color: #fff;*/
+	}
 }
 .display {
 	float: none !important;
