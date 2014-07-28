@@ -1,7 +1,32 @@
 /**
  * Variables
  **/
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700|Karla:400,700,400italic,700italic);
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url("chrome-extension://pbopnmphcjicbibaldhakdgngamcjkbl/src/inject/OpenSans-Regular-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-style: italic;
+  src: url("chrome-extension://pbopnmphcjicbibaldhakdgngamcjkbl/src/inject/OpenSans-Italic-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: bold;
+  font-weight: 600;
+  src: url("chrome-extension://pbopnmphcjicbibaldhakdgngamcjkbl/src/inject/OpenSans-Bold-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: bold;
+  font-weight: 600;
+  font-style: italic;
+  src: url("chrome-extension://pbopnmphcjicbibaldhakdgngamcjkbl/src/inject/OpenSans-Bolditalic-webfont.woff") format("woff");
+}
 html {
   box-sizing: border-box;
 }
@@ -14,7 +39,7 @@ html {
 body {
   background-color: #fff;
   padding-top: 170px;
-  font-family: 'Open Sans', Helvetica, sans-serif !important;
+  font-family: "Open Sans", Helvetica, sans-serif !important;
   color: #34495e !important;
   font-size: 15px !important;
 }
@@ -27,22 +52,45 @@ body {
   top: 0;
   right: 0;
   left: 0;
-  padding: 25px 50px !important;
+  padding: 0 50px !important;
   width: 100% !important;
   border-bottom: none !important;
   z-index: 999;
   margin-bottom: 0 !important;
   min-height: 70px;
-  background-color: #0056eb !important;
+  line-height: 70px;
+  background-color: #2980b9 !important;
   color: #fff !important;
 }
 
 #logo {
   width: auto !important;
+  background: url(chrome-extension://pbopnmphcjicbibaldhakdgngamcjkbl/img/pinboard.svg) 0 center no-repeat;
+  padding-left: 40px;
+}
+
+.pin_logo {
+  display: none;
 }
 
 #timer {
   display: none;
+}
+
+#top_menu {
+  margin-top: 0 !important;
+  font-size: 12px;
+  display: none !important;
+}
+@media screen and (min-width: 900px) {
+  #top_menu {
+    display: block !important;
+  }
+}
+@media screen and (min-width: 1100px) {
+  #top_menu {
+    font-size: 15px;
+  }
 }
 
 /*#banner {
@@ -55,7 +103,7 @@ a,
 a:link,
 .small_username a:link,
 .small_username a:visited {
-  color: #0056eb !important;
+  color: #2980b9 !important;
 }
 
 a:visited {
@@ -64,7 +112,7 @@ a:visited {
 
 a:hover,
 .small_username a:hover {
-  color: #003185 !important;
+  color: #164666 !important;
 }
 
 #top_menu a,
@@ -132,7 +180,7 @@ a.bundle:hover {
 
 #search_query_field {
   padding: 5px;
-  border: 2px solid #fff;
+  border: 2px solid #cbc8c8;
   background-color: #fff;
   border-radius: 5px;
   vertical-align: top;
@@ -143,18 +191,9 @@ a.bundle:hover {
   background-color: #FFF;
   border-radius: 40px;
 }
-
-/*#searchbox form:before {
-	content: 'Search';
-	font-size: 18px;
-	margin-right: 15px;
-	position: relative;
-	top: 3px;
-	display: inline-block;
-}*/
 #search_query_field:focus {
   outline: none;
-  border-color: #ddd;
+  border-color: #b2adad;
 }
 
 #searchbox br {
@@ -163,13 +202,19 @@ a.bundle:hover {
 
 .search_button {
   display: inline-block;
-  /*margin-left: 15px;*/
   vertical-align: middle;
   margin-top: 0 !important;
 }
-
+.search_button form {
+  display: inline-block !important;
+  width: auto !important;
+}
+.search_button p {
+  margin-bottom: 0 !important;
+  margin-left: 15px;
+}
 .search_button input[type=submit] {
-  background-color: #0056eb;
+  background-color: #2980b9;
   color: #fff;
   font-weight: bold;
   border-radius: 5px;
@@ -180,24 +225,30 @@ a.bundle:hover {
   vertical-align: top;
   margin-left: 15px;
   cursor: pointer;
+  font-family: "Open Sans", Helvetica, sans-serif !important;
+  font-size: 14px;
 }
-
 .search_button input[type=submit]:hover {
-  background-color: #003185;
+  background-color: #164666;
 }
 
-.search_button form {
-  display: inline-block !important;
-  width: auto !important;
+.pin-ac .bd {
+  width: 300px !important;
+  margin-left: 38px !important;
+  border: 2px solid #b2adad !important;
+  border-top-width: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 0 5px 5px;
+  overflow: hidden;
+  margin-top: -5px;
+  text-align: left !important;
 }
-
-.search_button p {
-  margin-bottom: 0 !important;
-  margin-left: 15px;
+.pin-ac .match {
+  color: #2980b9 !important;
 }
-
-.pin-ac.on {
-  width: 300px;
+.pin-ac .active {
+  background-color: #2980b9 !important;
+  color: #fff !important;
 }
 
 /**
@@ -205,7 +256,7 @@ a.bundle:hover {
  */
 #content {
   width: 90% !important;
-  max-width: 1200px !important;
+  max-width: none !important;
 }
 
 #content:after,
@@ -241,12 +292,11 @@ a.bundle:hover {
   position: absolute;
   bottom: 100% !important;
   left: 0;
-  margin-bottom: 5px;
   width: 100px !important;
 }
 
 #nextprev {
-  border-bottom: 1px solid #0056eb !important;
+  border-bottom: 1px solid #2980b9 !important;
   padding-bottom: 10px;
 }
 
@@ -260,7 +310,6 @@ a.bundle:hover {
   position: relative;
   margin-left: -10px !important;
 }
-
 .bookmark:hover {
   /*background-color: #fff;*/
 }
@@ -272,6 +321,7 @@ a.bundle:hover {
 .bookmark_title {
   font-size: 18px !important;
   font-weight: bold;
+  padding-right: 40px;
 }
 
 .description {
@@ -290,14 +340,17 @@ a.bundle:hover {
   font-size: 2em !important;
   line-height: 1;
 }
-
+.star span {
+  color: #fff;
+}
 .star span:after {
   content: '\2606';
+  color: #ddd;
 }
 
 .star:hover,
 .selected_star {
-  color: #0056eb !important;
+  color: #2980b9 !important;
 }
 
 .star.selected_star span:after {
