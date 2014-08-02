@@ -1,6 +1,6 @@
 {
   "name": "Pinboard style",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "manifest_version": 2,
   "description": "This is a simple extension to improve the look and feel for Pinboard (http://pinboard.in). It is under active development so if you find any problems, please create an issue at https://github.com/mrmartineau/pinboard-chrome-extension/issues.",
   "homepage_url": "http://martineau.tv",
@@ -12,9 +12,7 @@
   "default_locale": "en",
   "permissions": [
     "contentSettings",
-    "https://pinboard.in/*",
-    "http://fonts.googleapis.com/",
-    "https://fonts.googleapis.com/"
+    "https://pinboard.in/*"
   ],
   "content_scripts": [
     {
