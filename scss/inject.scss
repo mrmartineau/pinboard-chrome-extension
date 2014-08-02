@@ -328,10 +328,14 @@ a.bundle:hover {
 	border-radius: 0 0 5px 5px;
 }
 a.rss_link {
+	position: absolute;
+	top: 15px;
+	right: 15px;
 	display: inline-block;
 	padding: 3px 6px;
 	color: #fff !important;
 	background-color: orange;
+	border-radius: 3px;
 }
 
 
@@ -356,7 +360,8 @@ a.rss_link {
 .bookmark_title {
 	font-size: 18px !important;
 	font-weight: bold;
-	padding-right: 40px;
+	padding-right: 50px;
+	display: inline-block;
 }
 .description {
 	margin-bottom: 7px;
@@ -486,19 +491,8 @@ form[name=sort] {
 		text-align: center;
 	}
 }
-input[type=text] {
-	// border: 2px solid #ddd !important;
-	// border-radius: 5px;
-	// padding: 5px;
-	// font-family: $font-family;
-	// font-size: 14px;
-
-	// &:focus {
-	// 	border-color: $color-primary !important;
-	// 	outline: none;
-	// 	color: $color-primary;
-	// }
-
+input[type=text],
+textarea {
 	font-family: $font-family;
 	padding: 5px;
 	border: 2px solid darken($color-search-bg, 15%) !important;

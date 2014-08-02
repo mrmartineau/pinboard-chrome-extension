@@ -315,10 +315,14 @@ a.bundle:hover {
 }
 
 a.rss_link {
+  position: absolute;
+  top: 15px;
+  right: 15px;
   display: inline-block;
   padding: 3px 6px;
   color: #fff !important;
   background-color: orange;
+  border-radius: 3px;
 }
 
 /**
@@ -342,7 +346,8 @@ a.rss_link {
 .bookmark_title {
   font-size: 18px !important;
   font-weight: bold;
-  padding-right: 40px;
+  padding-right: 50px;
+  display: inline-block;
 }
 
 .description {
@@ -478,7 +483,8 @@ form[name=sort] input[type=text] {
   text-align: center;
 }
 
-input[type=text] {
+input[type=text],
+textarea {
   font-family: "Open Sans", Helvetica, sans-serif !important;
   padding: 5px;
   border: 2px solid #d1d1d1 !important;
@@ -488,7 +494,8 @@ input[type=text] {
   font-size: 18px;
   background-color: #FFF;
 }
-input[type=text]:focus {
+input[type=text]:focus,
+textarea:focus {
   outline: none;
   border-color: #2980b9 !important;
   color: #2980b9;
