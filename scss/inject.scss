@@ -101,6 +101,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: 0 !important;
 	font-size: $font-size - 3;
 	display: none !important;
+	color: transparent !important;
 
 	@media screen and (min-width: 900px) {
 		display: block !important;
@@ -109,6 +110,9 @@ h1, h2, h3, h4, h5, h6 {
 	@media screen and (min-width: 1100px) {
 		font-size: $font-size;
 	}
+}
+#top_menu a {
+	text-transform: capitalize;
 }
 
 /*#banner {
