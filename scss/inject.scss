@@ -8,7 +8,11 @@ $color-tag       : #B34700;
 $color-bundle    : #00B874;
 $font-size       : 15px;
 $color-search-bg : #f7f7f7;
+$input-border    : darken($color-search-bg, 15%);
 $header-height   : 70px;
+$border-width    : 2px;
+$border-radius   : 5px;
+
 
 @font-face {
   font-family: 'Open Sans';
@@ -50,11 +54,20 @@ html {
 body {
 	background-color: #fff;
 	padding-top: ($header-height * 2) + 30;
-	font-family: $font-family;
 	color: $color-text !important;
 	font-size: $font-size !important;
 }
 
+body,
+h1, h2, h3, h4, h5, h6,
+.homepage_heading,
+.homepage_subheading,
+.blurb {
+	font-family: $font-family;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold !important;
+}
 /**
  * Header
  */
@@ -199,6 +212,7 @@ a.bundle:hover {
 	height: 40px;
 	padding: 5px 18px;
 	border-radius: 40px;
+	display: inline-block !important;
 }
 #searchbox br {
 	display: none;
@@ -207,6 +221,10 @@ a.bundle:hover {
 	display: inline-block;
 	vertical-align: middle;
 	margin-top: 0 !important;
+
+	input[type=submit] {
+		margin-left: 15px;
+	}
 
 	form {
 		display: inline-block !important;
@@ -217,26 +235,8 @@ a.bundle:hover {
 		margin-left: 15px;
 	}
 
-	input[type=submit] {
-		background-color: $color-link;
-		color: #fff;
-		font-weight: bold;
-		border-radius: 5px;
-		height: 40px;
-		line-height: 40px;
-		border: none;
-		padding: 0 15px;
-		vertical-align: top;
-		margin-left: 15px;
-		cursor: pointer;
-		font-family: $font-family;
-		font-size: 14px;
-
-		&:hover {
-			background-color: darken($color-primary, 20%);
-		}
-	}
 }
+
 
 .pin-ac {
 	.bd {
@@ -260,8 +260,8 @@ a.bundle:hover {
 		}
 
 		ul {
-			border: 2px solid $color-primary !important;
-			border-radius: 5px;
+			border: $border-width solid $color-primary !important;
+			border-radius: $border-radius;
 			overflow: hidden;
 		}
 	}
@@ -305,7 +305,7 @@ a.bundle:hover {
 	background-color: $color-search-bg;
 	padding: 10px 15px 15px;
 	margin-bottom: 0 !important;
-	border-radius: 5px 5px 0 0;
+	border-radius: $border-radius $border-radius 0 0;
 
 	div:nth-child(2) {
 		display: block;
@@ -325,7 +325,7 @@ a.bundle:hover {
 	border-bottom: none !important;
 	background-color: $color-search-bg;
 	padding: 0px 15px 15px;
-	border-radius: 0 0 5px 5px;
+	border-radius: 0 0 $border-radius $border-radius;
 }
 a.rss_link {
 	position: absolute;
@@ -409,7 +409,7 @@ a.url_display {
 .url_link {
 	display: inline-block;
 	padding: 2px 3px;
-	border-radius: 2px;
+	border-radius: 3px;
 }
 
 /**
@@ -421,8 +421,8 @@ a.url_display {
 }
 #tag_cloud,
 #bundle_names {
-	padding: 15px;
-	border-radius: 5px;
+	padding: 10px 15px;
+	border-radius: $border-radius;
 	border: 1px solid $color-search-bg;
 	margin-bottom: 15px;
 
@@ -441,7 +441,6 @@ a.url_display {
 			font-size: $font-size;
 			margin-right: 5px;
 			margin-bottom: 5px;
-			// display: inline-block;
 		}
 	}
 	br {
@@ -453,7 +452,7 @@ a.url_display {
 #tag_cloud b {
 	display: block;
 	background-color: $color-search-bg;
-	margin: -15px -15px 15px !important;
+	margin: -10px -15px 15px !important;
 	padding: 10px 15px;
 }
 #tag_cloud_header {
@@ -465,6 +464,9 @@ a.url_display {
 	display: block;
 	margin-bottom: 5px;
 }
+#bundle_names > p a:first-child {
+	line-height: 1;
+}
 #bundle_names > p a:first-child,
 .tag_heading_selected {
 	font-weight: bold;
@@ -475,10 +477,26 @@ a.url_display {
  * Home page
  */
 .homepage_heading,
-.homepage_subheading {
-	font-family: $font-family;
+.homepage_subheading,
+.homepage li {
+	color: $color-text !important;
 }
-
+.signup_button {
+	width: auto !important;
+	height: auto !important;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	box-shadow: none !important;
+}
+.blurb_box {
+	padding: 15px;
+	border-radius: $border-radius;
+	height: auto !important;
+	margin-bottom: 15px;
+}
+h1.magazine_title {
+	color: $color-primary !important;
+}
 /**
  * Bundle page
  */
@@ -492,19 +510,84 @@ form[name=sort] {
 	}
 }
 input[type=text],
+input[type=password],
 textarea {
 	font-family: $font-family;
 	padding: 5px;
-	border: 2px solid darken($color-search-bg, 15%) !important;
+	border: $border-width solid $input-border !important;
 	background-color: #fff;
-	border-radius: 5px;
+	border-radius: $border-radius;
 	vertical-align: top;
 	font-size: 18px;
 	background-color: #FFF;
+	display: block;
+	width: 100%;
 
 	&:focus {
 		outline: none;
 		border-color: $color-primary !important;
 		color: $color-primary;
 	}
+}
+input[type=submit],
+.signup_button {
+	background-color: $color-link !important;
+	color: #fff !important;
+	font-weight: bold;
+	border-radius: $border-radius !important;
+	height: 40px;
+	line-height: 40px;
+	border: none !important;
+	padding: 0 15px;
+	vertical-align: top;
+	cursor: pointer;
+	font-family: $font-family;
+	font-size: 14px;
+
+	&:hover {
+		background-color: darken($color-primary, 20%) !important;
+	}
+}
+
+
+.tabs {
+	overflow: hidden;
+	margin-bottom: -2px !important;
+	max-height: 44px;
+}
+.tab {
+	height: auto !important;
+	border: none !important;
+	margin-right: 5px;
+	text-transform: capitalize;
+	padding: 0px !important;
+	width: auto !important;
+
+	a {
+		display: block;
+		padding: 10px !important;
+		border-radius: $border-radius $border-radius 0 0;
+		border: $border-width solid transparent !important;
+		overflow: hidden;
+
+		&:hover {
+			border-color: $input-border $input-border transparent $input-border !important;
+		}
+	}
+
+}
+.tab.tab_selected {
+	background-color: #fff !important;
+
+	a {
+		background-color: #fff !important;
+		border-color: $input-border $input-border #fff $input-border !important;
+	}
+}
+.tab_spacer {
+	display: none;
+}
+#tab_panes {
+	border: $border-width solid $input-border !important;
+	border-radius: 0 0 $border-radius $border-radius;
 }

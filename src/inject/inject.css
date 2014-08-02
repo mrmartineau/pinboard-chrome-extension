@@ -39,9 +39,20 @@ html {
 body {
   background-color: #fff;
   padding-top: 170px;
-  font-family: "Open Sans", Helvetica, sans-serif !important;
   color: #34495e !important;
   font-size: 15px !important;
+}
+
+body,
+h1, h2, h3, h4, h5, h6,
+.homepage_heading,
+.homepage_subheading,
+.blurb {
+  font-family: "Open Sans", Helvetica, sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold !important;
 }
 
 /**
@@ -186,6 +197,7 @@ a.bundle:hover {
   height: 40px;
   padding: 5px 18px;
   border-radius: 40px;
+  display: inline-block !important;
 }
 
 #searchbox br {
@@ -197,6 +209,9 @@ a.bundle:hover {
   vertical-align: middle;
   margin-top: 0 !important;
 }
+.search_button input[type=submit] {
+  margin-left: 15px;
+}
 .search_button form {
   display: inline-block !important;
   width: auto !important;
@@ -204,24 +219,6 @@ a.bundle:hover {
 .search_button p {
   margin-bottom: 0 !important;
   margin-left: 15px;
-}
-.search_button input[type=submit] {
-  background-color: #2980b9;
-  color: #fff;
-  font-weight: bold;
-  border-radius: 5px;
-  height: 40px;
-  line-height: 40px;
-  border: none;
-  padding: 0 15px;
-  vertical-align: top;
-  margin-left: 15px;
-  cursor: pointer;
-  font-family: "Open Sans", Helvetica, sans-serif !important;
-  font-size: 14px;
-}
-.search_button input[type=submit]:hover {
-  background-color: #164666;
 }
 
 .pin-ac .bd {
@@ -399,7 +396,7 @@ a.url_display {
 .url_link {
   display: inline-block;
   padding: 2px 3px;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 /**
@@ -412,7 +409,7 @@ a.url_display {
 
 #tag_cloud,
 #bundle_names {
-  padding: 15px;
+  padding: 10px 15px;
   border-radius: 5px;
   border: 1px solid #f7f7f7;
   margin-bottom: 15px;
@@ -444,7 +441,7 @@ a.url_display {
 #tag_cloud b {
   display: block;
   background-color: #f7f7f7;
-  margin: -15px -15px 15px !important;
+  margin: -10px -15px 15px !important;
   padding: 10px 15px;
 }
 
@@ -455,6 +452,10 @@ a.url_display {
 .tag_heading_selected {
   display: block;
   margin-bottom: 5px;
+}
+
+#bundle_names > p a:first-child {
+  line-height: 1;
 }
 
 #bundle_names > p a:first-child,
@@ -468,8 +469,28 @@ a.url_display {
  * Home page
  */
 .homepage_heading,
-.homepage_subheading {
-  font-family: "Open Sans", Helvetica, sans-serif !important;
+.homepage_subheading,
+.homepage li {
+  color: #34495e !important;
+}
+
+.signup_button {
+  width: auto !important;
+  height: auto !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-shadow: none !important;
+}
+
+.blurb_box {
+  padding: 15px;
+  border-radius: 5px;
+  height: auto !important;
+  margin-bottom: 15px;
+}
+
+h1.magazine_title {
+  color: #2980b9 !important;
 }
 
 /**
@@ -484,6 +505,7 @@ form[name=sort] input[type=text] {
 }
 
 input[type=text],
+input[type=password],
 textarea {
   font-family: "Open Sans", Helvetica, sans-serif !important;
   padding: 5px;
@@ -493,10 +515,75 @@ textarea {
   vertical-align: top;
   font-size: 18px;
   background-color: #FFF;
+  display: block;
+  width: 100%;
 }
 input[type=text]:focus,
+input[type=password]:focus,
 textarea:focus {
   outline: none;
   border-color: #2980b9 !important;
   color: #2980b9;
+}
+
+input[type=submit],
+.signup_button {
+  background-color: #2980b9 !important;
+  color: #fff !important;
+  font-weight: bold;
+  border-radius: 5px !important;
+  height: 40px;
+  line-height: 40px;
+  border: none !important;
+  padding: 0 15px;
+  vertical-align: top;
+  cursor: pointer;
+  font-family: "Open Sans", Helvetica, sans-serif !important;
+  font-size: 14px;
+}
+input[type=submit]:hover,
+.signup_button:hover {
+  background-color: #164666 !important;
+}
+
+.tabs {
+  overflow: hidden;
+  margin-bottom: -2px !important;
+  max-height: 44px;
+}
+
+.tab {
+  height: auto !important;
+  border: none !important;
+  margin-right: 5px;
+  text-transform: capitalize;
+  padding: 0px !important;
+  width: auto !important;
+}
+.tab a {
+  display: block;
+  padding: 10px !important;
+  border-radius: 5px 5px 0 0;
+  border: 2px solid transparent !important;
+  overflow: hidden;
+}
+.tab a:hover {
+  border-color: #d1d1d1 #d1d1d1 transparent #d1d1d1 !important;
+}
+
+.tab.tab_selected {
+  background-color: #fff !important;
+}
+.tab.tab_selected a {
+  background-color: #fff !important;
+  border-color: #d1d1d1 #d1d1d1 white #d1d1d1 !important;
+}
+
+.tab_spacer {
+  display: none;
+}
+
+#tab_panes {
+  border: 2px solid #d1d1d1 !important;
+  border-radius: 0 0 5px 5px;
 }
