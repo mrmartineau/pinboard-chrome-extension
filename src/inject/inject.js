@@ -1,18 +1,34 @@
-chrome.extension.sendMessage({}, function(response) {
-	var readyStateCheckInterval = setInterval(function() {
-		if (document.readyState === "complete") {
-			clearInterval(readyStateCheckInterval);
+document.addEventListener('DOMContentLoaded', function () {
+	var searchInput = document.getElementById('search_query_field');
+	var star        = document.querySelectorAll('.star span');
+	var homeMain    = document.getElementById('main_welcome');
+	var homeLangs;
 
-			/**
-			 * Search
-			 */
-			var searchInput = document.getElementById('search_query_field');
-			searchInput.setAttribute('placeholder', 'Search Pinboard');
+	// Search box
+	if (searchInput !== null) {
+		searchInput.setAttribute('placeholder', 'Search Pinboard');
+	} else {
+		document.body.classList.add('no-search');
+	}
 
-			var star = document.querySelectorAll('.star span');
-			for (var i = star.length - 1; i >= 0; i--) {
-				star[i].innerHTML = '';
-			}
+	// Home page
+	if (homeMain !== null) {
+		homeLangs = homeMain.parentElement.previousElementSibling;
+		homeMain.parentElement.classList.add('home-main');
+		homeLangs.classList.add('home-langs');
+	}
+
+	// Stars
+	if (star !== null) {
+		for (var i = star.length - 1; i >= 0; i--) {
+			star[i].innerHTML = '';
 		}
-	}, 10);
+	}
+
+	// How to
+	if (window.location.pathname == '/howto/') {
+		document.body.classList.add('howto');
+	}
+
 });
+
