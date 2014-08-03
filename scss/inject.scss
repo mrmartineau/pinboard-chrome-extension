@@ -60,6 +60,16 @@ body {
 	&.no-search {
 		padding-top: $header-height + 20;
 	}
+
+	&.topSquash {
+		padding-top: 20px;
+	}
+
+	&.note {
+		textarea {
+			height: 200px !important;
+		}
+	}
 }
 
 body,
@@ -299,9 +309,15 @@ a.bundle:hover {
 #main_column {
 	width: 65% !important;
 	margin-right: 5%;
+	margin-bottom: 30px !important;
 
 	.howto & {
 		width: 20% !important;
+	}
+
+	.settings & {
+		width: 100% !important;
+		margin-right: 0 !important;
 	}
 }
 #right_bar {
@@ -519,7 +535,7 @@ a.url_display {
 	height: auto !important;
 	margin-left: 5% !important;
 }
-#login {
+div#login {
 	padding: 15px;
 	background-color: $color-search-bg;
 	border-radius: $border-radius;
@@ -578,6 +594,7 @@ form[name=sort] {
 }
 input[type=text],
 input[type=password],
+input[name=tags],
 textarea {
 	font-family: $font-family;
 	padding: 5px;
@@ -657,4 +674,14 @@ input[type=submit],
 #tab_panes {
 	border: $border-width solid $input-border !important;
 	border-radius: 0 0 $border-radius $border-radius;
+}
+
+#import_history_table {
+	margin-top: 20px !important;
+	border-radius: $border-radius;
+	border: 2px solid $input-border !important;
+	width: 100% !important;
+	float: none !important;
+	padding: 15px !important;
+	clear: both !important;
 }

@@ -45,6 +45,12 @@ body {
 body.no-search {
   padding-top: 90px;
 }
+body.topSquash {
+  padding-top: 20px;
+}
+body.note textarea {
+  height: 200px !important;
+}
 
 body,
 h1, h2, h3, h4, h5, h6,
@@ -279,9 +285,14 @@ a.bundle:hover {
 #main_column {
   width: 65% !important;
   margin-right: 5%;
+  margin-bottom: 30px !important;
 }
 .howto #main_column {
   width: 20% !important;
+}
+.settings #main_column {
+  width: 100% !important;
+  margin-right: 0 !important;
 }
 
 #right_bar {
@@ -513,15 +524,15 @@ a.url_display {
   margin-left: 5% !important;
 }
 
-#login {
+div#login {
   padding: 15px;
   background-color: #f7f7f7;
   border-radius: 5px;
 }
-#login table {
+div#login table {
   width: 100% !important;
 }
-#login input[type=submit] {
+div#login input[type=submit] {
   display: block !important;
   width: 100%;
 }
@@ -576,6 +587,7 @@ form[name=sort] input[type=text] {
 
 input[type=text],
 input[type=password],
+input[name=tags],
 textarea {
   font-family: "Open Sans", Helvetica, sans-serif !important;
   padding: 5px;
@@ -590,6 +602,7 @@ textarea {
 }
 input[type=text]:focus,
 input[type=password]:focus,
+input[name=tags]:focus,
 textarea:focus {
   outline: none;
   border-color: #2980b9 !important;
@@ -656,4 +669,14 @@ input[type=submit]:hover,
 #tab_panes {
   border: 2px solid #d1d1d1 !important;
   border-radius: 0 0 5px 5px;
+}
+
+#import_history_table {
+  margin-top: 20px !important;
+  border-radius: 5px;
+  border: 2px solid #d1d1d1 !important;
+  width: 100% !important;
+  float: none !important;
+  padding: 15px !important;
+  clear: both !important;
 }

@@ -30,5 +30,20 @@ document.addEventListener('DOMContentLoaded', function () {
 		document.body.classList.add('howto');
 	}
 
+	// Add URL
+	if (window.location.pathname == '/add/') {
+		document.body.classList.add('topSquash');
+	}
+
+	// Add Note
+	if (window.location.pathname == '/note/add/') {
+		document.body.classList.add('note');
+	}
+
+	// Add Note
+	if (window.location.pathname.indexOf('settings') > 0) {
+		document.body.classList.add('settings');
+	}
+
 });
 
