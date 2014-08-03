@@ -16,20 +16,16 @@
   ],
   "content_scripts": [
     {
-      "matches": [
-        "https://pinboard.in/*"
-      ],
       "css": [
         "src/inject/inject.css"
-      ]
-    },
-    {
-      "matches": [
-        "https://pinboard.in/*"
       ],
       "js": [
         "src/inject/inject.js"
-      ]
+      ],
+      "matches": [
+        "https://pinboard.in/*"
+      ],
+      "run_at": "document_start"
     }
   ],
   "web_accessible_resources":[
