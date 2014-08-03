@@ -56,6 +56,10 @@ body {
 	padding-top: ($header-height * 2) + 30;
 	color: $color-text !important;
 	font-size: $font-size !important;
+
+	&.no-search {
+		padding-top: $header-height + 20;
+	}
 }
 
 body,
@@ -295,10 +299,18 @@ a.bundle:hover {
 #main_column {
 	width: 65% !important;
 	margin-right: 5%;
+
+	.howto & {
+		width: 20% !important;
+	}
 }
 #right_bar {
 	width: 30% !important;
 	margin-left: 0 !important;
+
+	.howto & {
+		width: 75% !important;
+	}
 }
 
 /**
@@ -480,6 +492,47 @@ a.url_display {
 /**
  * Home page
  */
+.home-main {
+	width: 80% !important;
+	overflow: hidden;
+	margin-right: 0 !important;
+	margin-left: 5% !important;
+}
+.home-langs {
+	width: 15% !important;
+}
+@media screen and (min-width: 800px) {
+	.home-langs {
+		width: 10% !important;
+	}
+	.home-main {
+		width: 88% !important;
+	}
+}
+
+#main_welcome {
+	width: 50% !important;
+	height: auto !important;
+}
+#main_right_column {
+	width: 45% !important;
+	height: auto !important;
+	margin-left: 5% !important;
+}
+#login {
+	padding: 15px;
+	background-color: $color-search-bg;
+	border-radius: $border-radius;
+
+	table {
+		width: 100% !important;
+	}
+
+	input[type=submit] {
+		display: block !important;
+		width: 100%;
+	}
+}
 .homepage_heading,
 .homepage_subheading,
 .homepage li {
@@ -491,6 +544,16 @@ a.url_display {
 	margin-left: 0 !important;
 	margin-right: 0 !important;
 	box-shadow: none !important;
+}
+#blurb_div {
+	float: none !important;
+	width: 100% !important;
+	clear: both !important;
+}
+.blurb_column {
+	width: 46% !important;
+	margin-left: 2% !important;
+	margin-right: 2% !important;
 }
 .blurb_box {
 	padding: 15px;
