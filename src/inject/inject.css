@@ -51,6 +51,11 @@ body.topSquash {
 body.note textarea {
   height: 200px !important;
 }
+@media screen and (max-width:680px) {
+  body {
+    margin:0;
+  }
+}
 
 body,
 h1, h2, h3, h4, h5, h6,
@@ -213,6 +218,11 @@ a.bundle:hover {
   border-radius: 40px;
   display: inline-block !important;
 }
+@media screen and (max-width:680px) {
+  #search_query_field {
+    width: 100px;
+  }
+}
 
 #searchbox br {
   display: none;
@@ -233,6 +243,11 @@ a.bundle:hover {
 .search_button p {
   margin-bottom: 0 !important;
   margin-left: 15px;
+}
+@media screen and (max-width:680px) {
+  .search_button p {
+    display: none;
+  }
 }
 
 .pin-ac .bd {
@@ -286,6 +301,11 @@ a.bundle:hover {
   width: 65% !important;
   margin-right: 5%;
   margin-bottom: 30px !important;
+}
+@media screen and (max-width:680px) {
+  #main_column {
+    width: 100% !important;
+  }
 }
 .howto #main_column {
   width: 20% !important;
@@ -356,6 +376,11 @@ a.rss_link {
   float: none !important;
   position: relative;
   margin-left: -10px !important;
+}
+@media screen and (max-width:680px) {
+  .bookmark {
+    margin-left: 0 !important;
+  }
 }
 .bookmark:hover {
   /*background-color: #fff;*/
@@ -460,6 +485,11 @@ a.url_display {
 #bundle_names br {
   display: none;
 }
+@media screen and (max-width:680px) {
+  #bundle_names {
+    display: none;
+  }
+}
 
 #tag_cloud_header,
 #bundle_names > p a:first-child,
@@ -472,6 +502,11 @@ a.url_display {
 
 #tag_cloud_header p {
   margin: 0 !important;
+}
+@media screen and (max-width:680px) {
+  #tag_cloud {
+    display: none;
+  }
 }
 
 .tag_heading_selected {
